@@ -8,13 +8,20 @@ function App() {
   const handleCounter = () => {
     setCounter((prev) => prev + 1);
   };
+
+  const handleCounterReduce = () => {
+    setCounter((prev) => prev - 1);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <p onClick={() => setCounter(counter + 1)}>{counter}</p> */}
-        <button onClick={handleCounter}>{counter}</button>
+        <button onClick={handleCounter}>Increase</button>
+        <button onClick={handleCounterReduce}>Reduce</button>
 
+        <span>{counter}</span>
         <Content />
       </header>
     </div>
